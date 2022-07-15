@@ -1,0 +1,20 @@
+    <%- include('./partials/head') %> 
+    <body>
+        <div class="bkground">
+            <div class="container">
+                <form action="/auth/user" method="post">
+                    <h1>Start login</h1>
+                    <div class="container-input">
+                        <label for="email"><i class="fa-solid fa-envelope"></i></label>
+                        <input type="email" name="email" id="email" placeholder="E-mail">
+                    </div>
+                    <div class="container-input">
+                        <label for="password"><i class="fa-solid fa-key"></i></label>
+                        <input type="password" name="password" id="password" placeholder="Password">
+                    </div>
+                    <button type="submit" id="btn-login">Login</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

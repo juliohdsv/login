@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --transparent: rgba(0, 0, 0, 0.568);
+    --lightTransparent: rgba(0, 0, 0, 0.199);
+    --black: #000;
+    --white: #fff;
+    --gray:rgb(85, 84, 84);
+    --green: rgb(13, 39, 13);
+    --greenlight: rgb(32, 85, 32);
+}
+
+body{
+    background-image: url(/image/nature2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--white);
+    display: flex;    
+}
+
+.bkground ,
+.bkground .container{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    animation: btnAnime 1s; 
+}
+
+.bkground{
+    background-color: var(--lightTransparent);
+    height: 100vh;
+    width: 100vw;
+}
+
+.bkground .container{
+    background-color: var(--transparent);
+    border: 0.4px solid var(--black);
+    border-radius: 0px 30px 0 30px;
+    box-shadow: 15px 10px 40px 1px var(--transparent);
+    height: 50vh;
+    width: 20vw;
+    padding: 20px;
+}
+
+.bkground .container h1{
+    margin: 10px;
+}
+
+.bkground .container .container-input input,
+.bkground .container #btn-login{
+    background-color: var(--black);
+    color: var(--white);
+    border: 1px solid var(--white);
+}
+
+
+.bkground .container .container-input input{
+    width: 10rem;
+    height: 1.3rem;
+    border-radius: 6px;
+    padding: 5px;
+    margin: 10px;
+    transition: 0.8s;   
+}
+
+.bkground .container .container-input i{
+    color: var(--white);
+}
+
+.bkground .container #btn-login{
+    height: 23px;
+    width: 80px;
+    margin: 10px;
+    border-radius: 6px;
+    transition: 0.8s;   
+}
+
+.bkground .container #btn-login:hover,
+.bkground .container #btn-login:focus,
+.bkground .container .container-input input:hover,
+.bkground .container .container-input input:focus{
+    background-color: var(--green);
+    border: 1px solid var(--greenlight);
+    transition: 0.8s;   
+}
+
+
+.bkground .container .container-input i:hover{
+    color: var(--green);
+}
+
+
+@media (max-width: 400px){
+
+    .bkground .container{
+        height: 50vh;
+        width: 80vw;
+        padding: 10px;
+    }
+
+}
+
+
+@keyframes btnAnime{
+    0%{
+        opacity: 0;
+    }
+    5%{
+        opacity: 0.5;
+    }
+    10%{
+        opacity: 0.10;
+    }
+    20%{
+        opacity: 0.20;
+    }
+    30%{
+        opacity: 0.30;
+    }
+    40%{
+        opacity: 0.40;
+    }
+    50%{
+        opacity: 0.50;
+    }
+    60%{
+        opacity: 0.60;
+    }
+    70%{
+        opacity: 0.70;
+    }
+    80%{
+        opacity: 0.80;
+    }
+    90%{
+        opacity: 0.90;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
