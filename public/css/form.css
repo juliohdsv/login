@@ -53,7 +53,8 @@ body{
 }
 
 .bkground .container .container-input input,
-.bkground .container #btn-send{
+.bkground .container #btn-send,
+.bkground .container #btn-back{
     background-color: var(--black);
     color: var(--white);
     border: 1px solid var(--white);
@@ -73,7 +74,8 @@ body{
     color: var(--white);
 }
 
-.bkground .container #btn-send{
+.bkground .container #btn-send,
+.bkground .container #btn-back{
     height: 23px;
     width: 80px;
     margin: 10px;
@@ -83,6 +85,8 @@ body{
 
 .bkground .container #btn-send:hover,
 .bkground .container #btn-send:focus,
+.bkground .container #btn-back:hover,
+.bkground .container #btn-back:focus,
 .bkground .container .container-input input:hover,
 .bkground .container .container-input input:focus{
     background-color: var(--green);
