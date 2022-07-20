@@ -1,1 +1,10 @@
 Projeto tela de login
+
+Frameworks, NPM
+
+* Bcryptjs
+* Nodemon
+* EJS
+* Uuid
+* Express
+* Path
