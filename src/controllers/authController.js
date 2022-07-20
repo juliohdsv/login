@@ -1,24 +1,39 @@
 const fs = require('fs');
+const path = require('path');
+const bcrypt = require('bcryptjs');
 
+const userPath = path.join(__dirname, '..', 'database','users.json');
 
 const authController = {
-
-    getLoginScreen: (request, response) =>{
-        response.render('index');
-    },
     
     login: (request, response) => {
 
+        const users = JSON.parse(fs.readFileSync(userPath));
         const { email, password } = request.body;
-        
-       // fs.appendFileSync(path.join(__dirname, './src/database/users.db.json');
+        const userFound = users.find(item => item.email === email);
 
-        console.table({ email, password });
+        if(!userFound){
+            return response.status(401).render('index', {
+                title: "Login",
+                cssType: "/css/index.css"
+            });
+        };
 
+        const passwordFound = bcrypt.compareSync(password, userFound.password); 
 
-        //response.render('home', {user: email});
-    }
-
+        if(!passwordFound){
+            return response.status(401).render('index', {
+                title: "Login",
+                cssType: "/css/index.css"
+            });
+        }
+ 
+        return response.status(401).render('home', {
+            title: "Home",
+            cssType: "/css/home.css",
+            user: userFound.name
+        });
+    },
 };
 
 module.exports = authController;

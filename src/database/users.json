@@ -1,12 +1,1 @@
-[
-    {
-        "id": 1,
-        "name": "Julio",
-        "email": "julio@gmail.com"
-    },
-    {
-        "id": 2,
-        "name": "Lucas",
-        "email": "Lucas@gmail.com"
-    }
-]
+[{"id":"2b9e0c5c-6471-4117-80d2-3fdcb11c7cbd","name":"julio","email":"julio@gmail.com","password":"$2a$10$OE.o2g.KVFB/AHJb4cegtetpZU27spCJBMt5KJLgEu.8RppldfC3O"}]

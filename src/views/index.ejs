@@ -2,7 +2,7 @@
     <body>
         <div class="bkground">
             <div class="container">
-                <form action="/auth/user" method="post">
+                <form action="/auth/login" method="post">
                     <h1>Start login</h1>
                     <div class="container-input">
                         <label for="email"><i class="fa-solid fa-envelope"></i></label>
@@ -15,12 +15,23 @@
                     <div class="container-links">
                         <ul>
                             <li><a href="#">Forgot password?</a></li>
-                            <li><a href="#">Create account</a></li>    
+                            <li><a href="/form">Create account</a></li>    
                         </ul>
                     </div>
-                    <button type="submit" id="btn-login">Login</button>
+                    <button type="submit" id="btn-login" onclick="checkData()">Login</button>
                 </form>
             </div>
         </div>
+        <script>
+            function checkData(){
+
+                const password = document.getElementById('password');
+                const email = document.getElementById('email');
+                
+                if(email.value == '' || password.value == ''){
+                    alert('Por favor, preencher todos os campos.');
+                };
+            }
+        </script>
     </body>
 </html>
