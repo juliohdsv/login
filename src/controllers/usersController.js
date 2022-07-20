@@ -12,6 +12,13 @@ const usersController = {
             const users = JSON.parse(fs.readFileSync(userPath));
             const { name, email, password } = request.body;
 
+            if(email == '' || password == '' || name ==''){
+                return response.render('index', {
+                    title: "Login",
+                    cssType: "/css/index.css"
+                });
+            };
+
             const newUser = {
                 id: uuid(),
                 name: name,
